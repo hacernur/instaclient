@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-15 04:03+0300\n"
+"POT-Creation-Date: 2016-05-28 15:07+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,6 +37,10 @@ msgstr "Resim Web Adresi Durumu"
 #: instaclient/apps/core/apps.py:9
 msgid "General"
 msgstr "Genel"
+
+#: instaclient/apps/core/forms.py:10
+msgid "Search HashTag"
+msgstr "Hashtag Ara"
 
 #: instaclient/apps/core/models.py:7
 msgid "Created Time"

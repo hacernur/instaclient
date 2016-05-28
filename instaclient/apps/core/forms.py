@@ -1,12 +1,13 @@
 #-*- coding: utf-8 -*-
 
 from django import forms
+from django.utils.translation import ugettext_lazy as _
 
 from core.models import HashTag
 
 
 class SearchHashTagForm(forms.ModelForm):
-    hashtag = forms.CharField(widget=forms.TextInput(attrs={'placeholder': u' Search HashTag'}), required = True)
+    hashtag = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _(u'Search HashTag')}), required = True)
 
     class Meta:
         model = HashTag
