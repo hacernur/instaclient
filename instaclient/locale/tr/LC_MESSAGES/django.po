@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-15 04:03+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: instaclient/apps/core/admin.py:11
+msgid "HashTag General Informations"
+msgstr "HashTag Genel Bilgiler"
+
+#: instaclient/apps/core/admin.py:14
+msgid "HashTag Status"
+msgstr "Hashtag Durumu"
+
+#: instaclient/apps/core/admin.py:28
+msgid "Image Url General Informations"
+msgstr "Resim Web Adresi Genel Bilgiler"
+
+#: instaclient/apps/core/admin.py:31
+msgid "Image Url Status"
+msgstr "Resim Web Adresi Durumu"
+
+#: instaclient/apps/core/apps.py:9
+msgid "General"
+msgstr "Genel"
+
+#: instaclient/apps/core/models.py:7
+msgid "Created Time"
+msgstr "Oluşturulma Zamanı"
+
+#: instaclient/apps/core/models.py:8
+msgid "Updated Time"
+msgstr "Güncellenme Zamanı"
+
+#: instaclient/apps/core/models.py:15 instaclient/apps/core/models.py:38
+msgid "HashTag"
+msgstr "HashTag"
+
+#: instaclient/apps/core/models.py:16
+msgid "Search Count"
+msgstr "Aranma Sayısı"
+
+#: instaclient/apps/core/models.py:17
+msgid "Defective HashTag"
+msgstr "Ayıplı Hashtag"
+
+#: instaclient/apps/core/models.py:20
+msgid "Hashtag"
+msgstr "Hashtag"
+
+#: instaclient/apps/core/models.py:21
+msgid "HashTags"
+msgstr "Hashtagler"
+
+#: instaclient/apps/core/models.py:37
+msgid "URL"
+msgstr "Web Adresi"
+
+#: instaclient/apps/core/models.py:41
+msgid "Image Url"
+msgstr "Resim Web Adresi"
+
+#: instaclient/apps/core/models.py:42
+msgid "Image Urls"
+msgstr "Resim Web Adresleri"
+
+#: instaclient/apps/core/models.py:45 instaclient/apps/core/models.py:48
+msgid "Download"
+msgstr "İndir"
+
+#: instaclient/apps/core/models.py:51 instaclient/apps/core/models.py:55
+msgid "Show"
+msgstr "Göster"
+
+#: instaclient/templates/index.html:6 instaclient/templates/index.html:16
+msgid "The ultimate Instagram Client"
+msgstr "The ultimate Instagram Client"
+
+#: instaclient/templates/index.html:41
+msgid "Search"
+msgstr "Arama"
+
+#: instaclient/templates/index.html:47
+msgid "Results"
+msgstr "Sonuçlar"
+
+#: instaclient/templates/index.html:75
+msgid "Let's Search A Hashtag"
+msgstr "Hadi Bir Hashtag Ara"
+
+#: instaclient/templates/index.html:77
+msgid "Images Not Found"
+msgstr "Resim Bulunamadı"
+
+#: instaclient/templates/index.html:83
+msgid "Previous Hashtags"
+msgstr "Önceki Hashtagler"
+
+#: instaclient/templates/index.html:96
+msgid "Most Search Hashtags"
+msgstr "En Çok Aranan Hashtagler"

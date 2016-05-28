@@ -1,0 +1,115 @@
+{% load i18n staticfiles core_extra %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>InstaClient | {% trans 'The ultimate Instagram Client' %}</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" charset="utf-8">
+  <link rel="stylesheet" href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+</head>
+<body>
+
+  <h1>{% trans 'The ultimate Instagram Client' %}</h1>
+
+  <div id="language-selection" class="dropdown">
+    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+      {{ request.LANGUAGE_CODE|upper }} <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right">
+      <li class="dropdown">
+        {% get_available_languages as request.LANGUAGES %}
+
+        {% get_language_info_list for LANGUAGES as languages %}
+          {% for language in languages %}
+            <li>
+              <a href="/{{ language.code }}{{ request.get_full_path|slice:'3:' }}">{{ language.name_local }}</a>
+            </li>
+          {% endfor %}
+      </li>
+    </ul>
+  </div>
+
+  <div class="content">
+
+    <form method="GET">
+      <div class="search-box">
+        {% add_attrs form_search_hashtag.hashtag %}
+        <button type="submit">{% trans 'Search' %}</button>
+      </div>
+    </form>
+
+    <div class="results">
+      {% if images %}
+        <h2>{% trans 'Results' %}</h2>
+        <ul class="img-area">
+          {% for image in images %}
+            <li>
+
+              <img src="{{ image.thumbnail.url }}" width="150" height="150">
+
+              <div class="row" style="margin-left:-6px; margin-right:0px;">
+                <div class="col-sm-4">
+                  <a href="{{ image.thumbnail.url }}" target="_blank">
+                    <i class="fa fa-x fa-picture-o" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="{{ image.low_resolution.url }}" target="_blank">
+                    <i class="fa fa-lg fa-picture-o" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="{{ image.standard_resolution.url }}" target="_blank">
+                    <i class="fa fa-2x fa-picture-o" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      {% elif images == None %}
+        <h2>{% trans "Let's Search A Hashtag" %}</h2>
+      {% else %}
+        <h2>{% trans 'Images Not Found' %}</h2>
+      {% endif %}
+    </div><!-- end results -->
+
+    <div class="prev-hashtags">
+      {% if previous_hashtags %}
+        <h2>{% trans 'Previous Hashtags' %}</h2>
+        <ul>
+          {% for previous_hashtag in previous_hashtags %}
+            <li>
+              <a href="{% url 'index' %}?hashtag={{ previous_hashtag.get_none_hashtag }}">{{ previous_hashtag.hashtag }}</a>
+              <span class="badge">{{ previous_hashtag.search_count }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+        <br/>
+      {% endif %}
+
+      {% if most_search_hashtags %}
+        <h2>{% trans 'Most Search Hashtags' %}</h2>
+        <ul>
+          {% for most_search_hashtag in most_search_hashtags %}
+          <li>
+            <a href="{% url 'index' %}?hashtag={{ most_search_hashtag.get_none_hashtag }}">{{ most_search_hashtag.hashtag }}</a>
+            <span class="badge">{{ most_search_hashtag.search_count }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/core.js' %}"></script>
+
+</body>
+</html>
