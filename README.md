@@ -1,7 +1,8 @@
 # Insta Client #
 
-[![instaclient](images/release-v1.0.0-red.svg)](https://github.com/hacernur/instaclient/releases/tag/v1.0.0)
-![instaclient](images/license-MIT-yellowgreen.svg)
+[![release v0.1.0](images/release-v1.0.0-red.png)](https://github.com/hacernur/instaclient/releases/tag/v1.0.0)
+![licence MIT](images/license-MIT-yellowgreen.png) 
+
 
 ### **Proje Fikri**
 
