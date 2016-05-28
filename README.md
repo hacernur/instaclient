@@ -11,10 +11,13 @@ proje ödevidir.
 
 ### **Proje Özellikleri**
 
-* Aranılan hashtag'ta instagram'da profili açık hesaplardan 20 resim çekilip gösteriliyor.
-* Resimler 3 farklı boyutta kullanıcıya gösterilebiliyor. (150x150, 320x320, 640x640)
-* Çoklu dil desteği eklendi. (Türkçe, İngilizce)
-* En son aranan ve en çok aranan 5 hashtag ekranda gösteriliyor link şeklinde.
++ Aranılan hashtag'ta instagram'da profili açık hesaplardan 20 resim çekilip gösteriliyor.
++ Resimler 3 farklı boyutta kullanıcıya gösterilebiliyor. (150x150, 320x320, 640x640)
+  - ![Çoklu Boyut](images/boyut.jpg)
++ Çoklu dil desteği eklendi. (Türkçe, İngilizce)
+  - ![Çoklu Dil](images/dil.jpg)
++ En son aranan ve en çok aranan 5 hashtag ekranda gösteriliyor link şeklinde.
+  - ![Hashtag](images/link.jpg)
 
 ### **Gelecekte Eklenecek Özellikler**
 
@@ -38,3 +41,7 @@ gereklidir.
 Not: Projenin yerelde çalışabilmesi için secret.py dosyasına 
 ihtiyaç vardır. Bu dosya içerisinde SECRET_KEY bulunmaktadır.
 Güvenlik sebebi ile bu anahtar değeri github'a atılmamıştır.
+
+### **Proje Görüntüsü**
+
+![Uygulama](images/uygulama.jpg)
